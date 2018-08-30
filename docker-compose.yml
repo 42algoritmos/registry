@@ -1,0 +1,10 @@
+registry:
+  restart: always
+  image: registry:2
+  container_name: registry
+  ports:
+    - 5000:5000
+  volumes:
+    - /data/registry:/var/lib/registry
+    - /etc/ssl/certs/docker:/etc/ssl/certs/docker
+  env_file: .env.production
