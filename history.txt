@@ -1,0 +1,5 @@
+curl -X GET https://registry.local:5000/v2/ubuntu-server/tags/list
+curl https://registry.local:5000/v2/_catalog
+docker pull registry.local:5000/ubuntu-server:1.0
+ping -c3 registry.local
+curl -X GET https://registry.local:5000/v2/ubuntu-server/tags/list
